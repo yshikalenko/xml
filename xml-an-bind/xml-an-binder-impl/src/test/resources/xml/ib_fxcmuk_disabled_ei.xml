@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fxcm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../schemas/config.xsd">
+<!-- FXMA IB configuration file for FXCMUK -->
+    <fxma>
+        <employment-information xmlns="http://www.fxcm.com/2020/fxma/xbean" enabled="false">
+            <section name="purpose_of_account" enabled="true">
+                <fields>
+                    <field name="account_purpose_expected_use" required="true">
+                        <options>
+                            <option value="diversification_of_investments" msg-id="UI.EAF.ACCOUNT_PURPOSE.EXPECTED_USE.OPTION.DIVERSIFICATION_OF_INVESTMENTS"/>
+                            <option value="hedging" msg-id="UI.EAF.ACCOUNT_PURPOSE.EXPECTED_USE.OPTION.HEDDING"/>
+                            <option value="long_term_growth" msg-id="UI.EAF.ACCOUNT_PURPOSE.EXPECTED_USE.OPTION.LONG_TERM_GROWTH"/>
+                            <option value="short_medium_term_speculation" msg-id="UI.EAF.ACCOUNT_PURPOSE.EXPECTED_USE.OPTION.SHORT_MEDIUM_TERM_SPECULATION"/>
+                        </options>
+                    </field>
+                    <field name="how_much_money_to_fund" required="true" >
+                        <options>
+                            <option value="0_1000" msg-id="UI.EAF.ACCOUNT_PURPOSE.HOW_MUCH_MONEY_TO_FUND.OPTION.0_1000"/>
+                            <option value="1001_5000" msg-id="UI.EAF.ACCOUNT_PURPOSE.HOW_MUCH_MONEY_TO_FUND.OPTION.1001_5000"/>
+                            <option value="5001_10000" msg-id="UI.EAF.ACCOUNT_PURPOSE.HOW_MUCH_MONEY_TO_FUND.OPTION.5001_10000"/>
+                            <option value="10001_inf" msg-id="UI.EAF.ACCOUNT_PURPOSE.HOW_MUCH_MONEY_TO_FUND.OPTION.10001_inf"/>
+                        </options>
+                    </field>
+                </fields>
+            </section>
+            <section name="source_of_funds" enabled="true">
+                <fields>
+                    <field name="source_of_funds_for_trading" required="true">
+                        <options name="employed">
+                            <option value="salary" msg-id="UI.EAF.EI.SOURCE_OF_FUNDS.EMPL.OPTION.SALARY"/>
+                            <option value="investments_dividends" msg-id="UI.EAF.EI.SOURCE_OF_FUNDS.EMPL.OPTION.INVESTMENTS_DIVIDENDS"/>
+                            <option value="rental_income" msg-id="UI.EAF.EI.SOURCE_OF_FUNDS.EMPL.OPTION.RENTAL_INCOME"/>
+                            <option value="sale_of_property" msg-id="UI.EAF.EI.SOURCE_OF_FUNDS.EMPL.OPTION.SALE_OF_PROPERTY"/>
+                            <option value="savings" msg-id="UI.EAF.EI.SOURCE_OF_FUNDS.EMPL.OPTION.SAVINGS"/>
+                            <option value="inheritance" msg-id="UI.EAF.EI.SOURCE_OF_FUNDS.EMPL.OPTION.INHERITANCE"/>
+                            <option value="royalties" msg-id="UI.EAF.EI.SOURCE_OF_FUNDS.EMPL.OPTION.ROYALTIES"/>
+                        </options>
+                        <options name="unemployed">
+                            <option value="investments_dividends" msg-id="UI.EAF.EI.SOURCE_OF_FUNDS.UNEMPL.OPTION.INVESTMENTS_DIVIDENDS"/>
+                            <option value="rental_income" msg-id="UI.EAF.EI.SOURCE_OF_FUNDS.UNEMPL.OPTION.RENTAL_INCOME"/>
+                            <option value="sale_of_property" msg-id="UI.EAF.EI.SOURCE_OF_FUNDS.UNEMPL.OPTION.SALE_OF_PROPERTY"/>
+                            <option value="savings" msg-id="UI.EAF.EI.SOURCE_OF_FUNDS.UNEMPL.OPTION.SAVINGS"/>
+                            <option value="inheritance" msg-id="UI.EAF.EI.SOURCE_OF_FUNDS.UNEMPL.OPTION.INHERITANCE"/>
+                            <option value="pension" msg-id="UI.EAF.EI.SOURCE_OF_FUNDS.UNEMPL.OPTION.PENSION"/>
+                            <option value="royalties" msg-id="UI.EAF.EI.SOURCE_OF_FUNDS.UNEMPL.OPTION.ROYALTIES"/>
+                            <option value="government_support" msg-id="UI.EAF.EI.SOURCE_OF_FUNDS.UNEMPL.OPTION.GOVERNMENT_SUPPORT"/>
+                            <option value="gift" msg-id="UI.EAF.EI.SOURCE_OF_FUNDS.UNEMPL.OPTION.GIFT"/>
+                            <option value="loan" msg-id="UI.EAF.EI.SOURCE_OF_FUNDS.UNEMPL.OPTION.LOAN"/>
+                        </options>
+                    </field>
+                </fields>
+            </section>
+        </employment-information>
+    </fxma>
+</fxcm>
