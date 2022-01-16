@@ -1,0 +1,36 @@
+<team>
+    <project-id>xml-an-bind</project-id>
+    <person>
+        <id>3463463</id>
+        <names>
+            <firstname>John</firstname>
+            <lastname>Plenkovich</lastname>
+        </names>
+        <physical>
+            <sex>male</sex>
+            <age>42</age>
+        </physical>
+    </person>
+    <person>
+        <id>3456454</id>
+        <names>
+            <firstname>Eliza</firstname>
+            <lastname>Bowl</lastname>
+        </names>
+        <physical>
+            <sex>female</sex>
+            <age>35</age>
+        </physical>
+    </person>
+    <person>
+        <id>3456465</id>
+        <names>
+            <firstname>John</firstname>
+            <lastname>Robbin</lastname>
+        </names>
+        <physical>
+            <sex>male</sex>
+            <age>28</age>
+        </physical>
+    </person>
+</team>

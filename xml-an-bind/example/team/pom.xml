@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.mydomain.example</groupId>
+  <version>1.0.0</version>
+  <artifactId>team</artifactId>
+  
+
+  <name>${project.groupId}:${project.artifactId}</name>
+  <description>Example of using xml-an-bind</description>
+  <url>https://github.com/yshikalenko/xml-an-bind/tree/main/utils</url>
+  <licenses>
+      <license>
+        <name>The Apache License, Version 2.0</name>
+        <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>Yuri Shikalenko</name>
+      <email>yuir@shikalenko.ru</email>
+      <organization>YShikalenko</organization>
+      <organizationUrl>http://www.shikalenko.ru/</organizationUrl>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/yshikalenko/xml-an-bind/example.git</connection>
+    <developerConnection>scm:git:ssh://github.com/yshikalenko/xml-an-bind/example</developerConnection>
+    <url>https://github.com/yshikalenko/xml-an-bind/tree/main/example</url>
+  </scm>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.shikalenko.xml-an-bind</groupId>
+      <artifactId>xml-an-binder</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.shikalenko.xml-an-bind</groupId>
+      <artifactId>xml-an-binder-impl</artifactId>
+      <version>1.0.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+</project>
