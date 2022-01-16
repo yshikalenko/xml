@@ -1,3 +1,31 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Что такое *xml-an-bind*?](#%D1%87%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-xml-an-bind)
+  - [Проблема](#%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D0%B0)
+  - [Решение](#%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B5)
+    - [Абстрактный уровень](#%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BD%D1%8B%D0%B9-%D1%83%D1%80%D0%BE%D0%B2%D0%B5%D0%BD%D1%8C)
+      - [Пол персоны](#%D0%BF%D0%BE%D0%BB-%D0%BF%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D1%8B)
+      - [Персона](#%D0%BF%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0)
+      - [Team](#team)
+      - [Абстрактная фабрика](#%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BD%D0%B0%D1%8F-%D1%84%D0%B0%D0%B1%D1%80%D0%B8%D0%BA%D0%B0)
+    - [Нижний уровень. Реализация.](#%D0%BD%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9-%D1%83%D1%80%D0%BE%D0%B2%D0%B5%D0%BD%D1%8C-%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F)
+      - [Имена персоны](#%D0%B8%D0%BC%D0%B5%D0%BD%D0%B0-%D0%BF%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D1%8B)
+      - [Физические характеристики персоны](#%D1%84%D0%B8%D0%B7%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5-%D1%85%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8-%D0%BF%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D1%8B)
+      - [Персона](#%D0%BF%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0-1)
+      - [Team](#team-1)
+      - [Фабрика Team](#%D1%84%D0%B0%D0%B1%D1%80%D0%B8%D0%BA%D0%B0-team)
+      - [Реализация абстрактной фабрики](#%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BD%D0%BE%D0%B9-%D1%84%D0%B0%D0%B1%D1%80%D0%B8%D0%BA%D0%B8)
+    - [Юнит тест фабрики](#%D1%8E%D0%BD%D0%B8%D1%82-%D1%82%D0%B5%D1%81%D1%82-%D1%84%D0%B0%D0%B1%D1%80%D0%B8%D0%BA%D0%B8)
+      - [Реализация фабрики Team](#%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D1%84%D0%B0%D0%B1%D1%80%D0%B8%D0%BA%D0%B8-team)
+  - [Получение данных из атрибутов](#%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-%D0%B8%D0%B7-%D0%B0%D1%82%D1%80%D0%B8%D0%B1%D1%83%D1%82%D0%BE%D0%B2)
+  - [Использование выражений *XPath*](#%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B9-xpath)
+  - [Обработка XML с Namespace](#%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0-xml-%D1%81-namespace)
+  - [Правила умалчивания:](#%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0-%D1%83%D0%BC%D0%B0%D0%BB%D1%87%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ### Что такое *xml-an-bind*?
 
 ***xml-an-bind*** - это java библиотека, которая позволяет с помощью annotations решать следующую проблему.
@@ -236,11 +264,7 @@ public class PersonImpl implements Person {
 
 Аннотация *@Element("physical")* нам понадобилась, потому что "*physical*" имя элемента не соответствует имени метода *setPhysicalState*.
 
-При этом другие "set" методы в классах *PersonImpl, PhysicalStateImpl, NamesImpl* не содержат аннотаций. Потому что на них распространяются:
-
-#### Правила умалчивания:
-
-Если метод не аннотированный, но его имя состоит из префикса *"get"*, а оставшаяся часть совпадает или с именем child элемента или с именем атрибута рассматриваемого node, в которых первый символ приведен к верхнему регистру, то в этот метод передается содержимое child элемента или атрибута соответственно.
+При этом другие "set" методы в классах *PersonImpl, PhysicalStateImpl, NamesImpl* не содержат аннотаций. Потому что на них распространяются [Правила умалчивания:](#%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0-%D1%83%D0%BC%D0%B0%D0%BB%D1%87%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F):
 
 ###### Team
 
@@ -500,7 +524,7 @@ Running org.mydomain.example.impl.TeamFactoryImplTest                           
     }
 ```
 
-Еще раз запустим предыдущий TestCase чтобы убедиться что ничего не сломалось
+Еще раз запустим предыдущий TestCase чтобы убедиться, что ничего не сломалось
 
 ```plaintext
 Running org.mydomain.example.impl.TeamFactoryImplTest                                                                            Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.107 sec
@@ -625,6 +649,8 @@ public class TeamFactoryImpl {
 
 Запустив тесты убеждаемся, что оба Test Cases выполняются успешно.
 
+Окончательный вариант этого примера [смотри git ](../example/team)
+
 #### Обработка XML с Namespace
 
 Обработка XML с namespace ничем не отличается от обработки xml без **namespace**, пока вы не используете **xpath**.
@@ -637,4 +663,8 @@ public class TeamFactoryImpl {
 В случае 1 **НЕОБХОДИМО** использовать namespace префиксы в xpath выражениях так как в этом случае полное **qname** то есть **prefix:localName** трактуется как имя узла. Префикс должно быть точно таким же каким он используется в обрабатываемом XML. И его не должно быть если XML узлы не имеют префикса используют namespace по умолчанию, определенное в атрибуте **xmlns**.
 
 В случае 2 **НЕ НАДО** использовать namespace префиксы в xpath выражениях. Только localName должны участвовать в выражении.
+
+#### Правила умалчивания:
+
+Если метод не аннотированный, но его имя состоит из префикса *"get"*, а оставшаяся часть совпадает или с именем child элемента или с именем атрибута рассматриваемого node, в которых первый символ приведен к верхнему регистру, то в этот метод передается содержимое child элемента или атрибута соответственно.
 
