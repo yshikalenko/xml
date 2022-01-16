@@ -649,7 +649,7 @@ public class TeamFactoryImpl {
 
 Запустив тесты убеждаемся, что оба Test Cases выполняются успешно.
 
-Окончательный вариант этого примера [смотри git ](../example/team)
+Окончательный вариант этого примера [смотри git ](../../../tree/main/xml-an-bind/example/team)
 
 #### Обработка XML с Namespace
 
