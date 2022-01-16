@@ -35,7 +35,7 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.shikalenko.abs</groupId>
+      <groupId>org.shikalenko.xml-an-bind</groupId>
       <artifactId>utils</artifactId>
       <version>1.0.0</version>
     </dependency>
